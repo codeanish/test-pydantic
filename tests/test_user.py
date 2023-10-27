@@ -9,7 +9,7 @@ def test_user_empty_email():
 
 def test_user_null_email():
     with pytest.raises(ValidationError):
-        User(name="John Doe", age=19)
+        User(name="John Doe", age=19, email="test")
 
 def test_user_too_young():
     with pytest.raises(ValidationError):
